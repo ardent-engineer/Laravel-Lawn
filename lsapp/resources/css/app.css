@@ -1,0 +1,361 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f9df;
+}
+
+header {
+  background-color: #338334;
+  margin-top: 0;
+  top: 0;
+  color: white;
+  font-size: 1.25em;
+  position: fixed;
+  min-width: 100%;
+  z-index: 10;
+}
+
+.service-btn {
+  margin: 0%;
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #0f210f;
+}
+#logout {
+    padding: 13px;
+    margin-bottom: 0px;
+}
+.service-btn:hover {
+  margin: 0%;
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #b8b9b8;
+  color: black;
+}
+
+h3 > .detail-btn {
+  margin: 0%;
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #4caf50;
+}
+
+h3 > .detail-btn:hover {
+  background-color: #8ed690;
+}
+
+button {
+  margin-bottom: 20px;
+  font-size: medium;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(156, 255, 64, 0.6);
+}
+
+nav {
+  padding: 10px;
+}
+#log-form {
+    display: inline;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  float: right;
+  align-items: center;
+  right: 0px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+}
+
+nav ul li {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  white-space: nowrap;
+  line-height: 50px;
+  border-radius: 25px;
+  transition-duration: 0.6s;
+  /* margin: 4px; */
+}
+
+#services-options {
+  margin: 3px;
+  padding: 10px;
+  background-color: #8ed690;
+}
+
+#dark-bg {
+  background-color: black;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: rgba(156, 255, 64, 0.6);
+  color: white;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+footer {
+  background-color: #338334;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+footer .social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  font-size: 1.1rem;
+  justify-content: center;
+}
+
+footer .social-links li {
+  margin: 0 10px;
+}
+
+footer .social-links a {
+  color: rgb(255, 255, 76);
+  text-decoration: none;
+}
+
+.logo {
+  /* position: absolute; */
+  width: 50px;
+  display: inline;
+  height: auto;
+  margin-left: 20px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+main {
+  padding-top: 0px;
+}
+
+.hero-image {
+  height: 500px;
+  margin-top: 50px;
+  background-image: url("../images/lawn-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  height: min-content;
+  background-color: #338334;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  color: white;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    #338334 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.service-container {
+  display: flex;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.service-item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-item img {
+  width: 100%;
+  height: 650px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.service-item h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 10px;
+  margin: 0;
+}
+
+.service-item:hover img {
+  opacity: 0.5;
+}
+
+.service-item:hover h3 {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+/* .service-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-item:hover::before {
+  opacity: 1;
+} */
+
+.testimonials {
+  padding: 40px 20px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+.testimonials h2 {
+  margin-bottom: 20px;
+  color: #338334;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-item {
+  background: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.stat img {
+  padding: 20px;
+  position: relative;
+  height: 325px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about-section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 80%;
+}
+.stat img:hover {
+  transform: scale(1.02);
+  transition-duration: 0.5s;
+}
+.testimonial-item h4 {
+  margin-top: 10px;
+  color: #338334;
+}
+
+/* Make images responsive */
+.service-item img {
+  width: 100%; /* Scale the image to fit the container's width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Remove the default inline spacing */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+#change-text {
+  background-color: #4caf50;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  nav img {
+    display: block;
+    scale: 1.5;
+    margin: 20px 0;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-image {
+    top: -50px;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .service-item img {
+    width: 350px; /* Scale the image to fit the container's width */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+  .service-item {
+    margin: 10px 0;
+    border-radius: 15px;
+  }
+}

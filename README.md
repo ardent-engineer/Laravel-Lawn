@@ -1,6 +1,6 @@
 # Greenkeeper App
 
-Greenkeeper App is a web application developed by the Ardent Engineer team as part of a project for BESE 13-A. This application leverages the Laravel framework to provide a robust and scalable solution for managing orders with a focus on user authentication, email verification, and database management.
+Greenkeeper App is a web application which leverages the Laravel framework to provide a robust and scalable solution for managing orders with a focus on user authentication, email verification, and database management.
 
 ## Features
 - **User Authentication**: Implements email verification using Laravel's `MustVerifyEmail` middleware.

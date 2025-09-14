@@ -28,8 +28,6 @@ demonstration of concepts OrderController (resource controller was created for C
 (8) For testing purposes, DatabaseSeeder has been implemented with one additional factory
 i.e. OrderFactory.
 
-(9) github: https://github.com/MSaadUmer
-
-(10) Redirection to login dashboard has been ensured, logout functionality was integerated into our
+(9) Redirection to login dashboard has been ensured, logout functionality was integerated into our
 navbar via a reference to logout route.
 

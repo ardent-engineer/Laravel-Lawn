@@ -72,5 +72,3 @@ Greenkeeper App is a web application which leverages the Laravel framework to pr
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue to discuss proposed changes.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

@@ -1,33 +1,76 @@
-Group Members {BESE 13-A}:
+# Greenkeeper App
 
-Muhammad Saad Umer (408485)
-Muhammad Musfir Baig (409968)
-Abdullah Usama (417872)
+Greenkeeper App is a web application developed by the Ardent Engineer team as part of a project for BESE 13-A. This application leverages the Laravel framework to provide a robust and scalable solution for managing orders with a focus on user authentication, email verification, and database management.
 
+## Features
+- **User Authentication**: Implements email verification using Laravel's `MustVerifyEmail` middleware.
+- **Email Notifications**: Account creation emails are logged to `storage/logs/laravel.logs` for easy access.
+- **Blade Templating**: Utilizes Blade directives (`@section`, `@foreach`, `@extends`) with a master layout (`components.layout`) to minimize redundancy.
+- **Database Management**: Models are defined with appropriate fields, foreign keys, and constraints, manipulated via Laravel ORM.
+- **CRUD Operations**: A resource controller (`OrderController`) handles Create, Read, Update, and Delete operations for orders.
+- **Asset Management**: Uses the `@vite` directive for CSS inclusion.
+- **Database Seeding**: Includes `DatabaseSeeder` and `OrderFactory` for testing purposes.
+- **Navigation**: Features a login dashboard redirect and integrated logout functionality in the navbar.
 
+## Installation
 
-(1) Please make sure to update the .env file before starting, i.e. setting up the database_connection,
-username, password and relevant configs.
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/ardent-engineer/greenkeeper-app.git
+   cd greenkeeper-app
+   ```
 
-(2) Middleware has been implemented via MustVerifyEmail.
+2. **Install Dependencies**
+   ```bash
+   composer install
+   npm install
+   ```
 
-(3) The email for creation of account is sent by default to storage/logs/laravel.logs.
-One may delete the existing contents of laravel.logs to get the email (resending if was not
-done prior).
+3. **Configure Environment**
+   - Copy the `.env.example` file to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Update the `.env` file with your database connection details, username, password, and other relevant configurations.
 
-(4) blade templates were used with @section @foreach @extends etc. directive, to ensure minimal
-redundancy components.layout (Master) acts as a parent.
+4. **Generate Application Key**
+   ```bash
+   php artisan key:generate
+   ```
 
-(5) Models were created with appropriate fields including foreign keys and constraints.
+5. **Run Migrations**
+   ```bash
+   php artisan migrate
+   ```
 
-(6) Model instances were manipulated using controllers via Laravel ORM. Specifically for such
-demonstration of concepts OrderController (resource controller was created for CRUD).
+6. **Seed the Database (Optional for Testing)**
+   ```bash
+   php artisan db:seed
+   ```
 
-(7) @vite directive were used for inclusion of the css.
+7. **Compile Assets**
+   ```bash
+   npm run dev
+   ```
 
-(8) For testing purposes, DatabaseSeeder has been implemented with one additional factory
-i.e. OrderFactory.
+8. **Start the Development Server**
+   ```bash
+   php artisan serve
+   ```
 
-(9) Redirection to login dashboard has been ensured, logout functionality was integerated into our
-navbar via a reference to logout route.
+## Usage
+- **Email Verification**: Upon account creation, check the `storage/logs/laravel.logs` file for the verification email. Clear the log file if needed to resend the email.
+- **Login/Logout**: Access the login dashboard after successful authentication. Use the logout option in the navbar to sign out.
+- **Order Management**: Use the application to create, read, update, and delete orders via the `OrderController`.
 
+## Notes
+- Ensure the `.env` file is correctly configured before starting the application.
+- The `MustVerifyEmail` middleware enforces email verification for secure access.
+- Blade templates are structured to reduce redundancy, with `components.layout` serving as the master template.
+- For testing, leverage the `OrderFactory` included in the `DatabaseSeeder`.
+
+## Contributing
+Contributions are welcome! Please submit a pull request or open an issue to discuss proposed changes.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
